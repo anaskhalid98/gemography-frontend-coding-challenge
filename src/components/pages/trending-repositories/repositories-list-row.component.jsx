@@ -39,7 +39,7 @@ export default function RepositoriesListRow(props) {
 							</Grid>
 							<Grid item xs={6}>
 								<Typography className={classes.otherDetails} variant={"body2"}>
-									Submitted 30 days ago by {props.userName}
+									Submitted {props.timeInterval} days ago by {props.userName}
 								</Typography>
 							</Grid>
 						</Grid>
@@ -66,6 +66,8 @@ RepositoriesListRow.propTypes = {
 	numberOfStars: PropTypes.number,
 	/** Number of issues for the repository */
 	numberOfIssues: PropTypes.number,
+	/** Time interval */
+	timeInterval: PropTypes.number,
 
 };
 
@@ -76,4 +78,5 @@ RepositoriesListRow.defaultProps = {
 	repositoryName: "Repository Name",
 	numberOfStars: 0,
 	numberOfIssues: 0,
+	timeInterval:null
 };

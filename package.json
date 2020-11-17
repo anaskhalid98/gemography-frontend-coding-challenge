@@ -41,6 +41,7 @@
   "devDependencies": {
     "@material-ui/icons": "^4.9.1",
     "prop-types": "^15.7.2",
+    "react-infinite-scroll-component": "^5.1.0",
     "react-router-dom": "^5.2.0"
   }
 }
