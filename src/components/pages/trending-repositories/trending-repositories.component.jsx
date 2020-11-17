@@ -10,7 +10,7 @@ export default function TrendingRepositoriesPage() {
 
 	return (
 		<React.Fragment>
-			<Container maxWidth="lg">
+			<Container maxWidth="lg" >
 				<main>
 					<RepositoriesList/>
 				</main>
