@@ -32,7 +32,6 @@ export default function RepositoriesList() {
 
 	if (isLoading) {
 		return (
-
 			<List className={classes.root}>
 				{
 					Array(6).fill(0).map((id,index) => {
@@ -45,7 +44,6 @@ export default function RepositoriesList() {
 		)
 	}
 	return (
-
 		<InfiniteScroll
 			dataLength={repositoriesData.length}
 			next={updatePageNumber}
