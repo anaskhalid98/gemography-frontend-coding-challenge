@@ -6,6 +6,8 @@ import {getMostStarredRepositories} from "./repositories-list.service";
 import RepositoriesListRowSkeleton from "./skeletons/repositories-list-row-skeleton.component";
 import InfiniteScroll from "react-infinite-scroll-component";
 import {getTimeIntervalInDay} from "../../utils";
+import uuid from 'react-uuid';
+
 
 
 export default function RepositoriesList() {
@@ -20,7 +22,6 @@ export default function RepositoriesList() {
 			.then(result => {
 				setIsLoading(false);
 				setRepositoriesData([...repositoriesData, ...result.data.items]);
-				console.log(result.data.items);
 			})
 			.catch(error => console.log("Error in loading repositories"));
 	}, [page]);
@@ -34,9 +35,9 @@ export default function RepositoriesList() {
 
 			<List className={classes.root}>
 				{
-					Array(6).fill(Math.random().toString(36).substr(2, 9)).map((id,index) => {
+					Array(6).fill(0).map((id,index) => {
 						return (
-							<RepositoriesListRowSkeleton key={id}/>
+							<RepositoriesListRowSkeleton key={uuid()}/>
 						)
 					})
 				}
@@ -52,9 +53,9 @@ export default function RepositoriesList() {
 			loader={
 				<List className={classes.root}>
 					{
-						Array(3).fill(Math.random().toString(36).substr(2, 9)).map((id,index) => {
+						Array(3).fill(0).map((id,index) => {
 							return (
-								<RepositoriesListRowSkeleton key={id}/>
+								<RepositoriesListRowSkeleton key={uuid()}/>
 							)
 						})
 					}
