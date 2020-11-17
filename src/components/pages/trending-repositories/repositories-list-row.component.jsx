@@ -2,13 +2,7 @@ import React from 'react';
 import ListItem from "@material-ui/core/ListItem";
 import Typography from "@material-ui/core/Typography";
 import useStyles from "./repositories-list-row.style";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import IconButton from "@material-ui/core/IconButton";
-import CardMedia from "@material-ui/core/CardMedia";
-import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import Avatar from "@material-ui/core/Avatar";
-import ListItemText from "@material-ui/core/ListItemText";
 import Grid from "@material-ui/core/Grid";
 import StarIcon from '@material-ui/icons/Star';
 import BugReportIcon from '@material-ui/icons/BugReport';
@@ -21,9 +15,9 @@ export default function RepositoriesListRow(props) {
 	return (
 		<React.Fragment>
 			<ListItem className={classes.listItem} alignItems="flex-start">
-				<Grid className={classes.gridContainer}  container spacing={3}>
-					<Grid  item  xs={2}>
-						<Avatar className={classes.avatar} variant={"square"} alt="Remy Sharp" src={props.avatar} />
+				<Grid className={classes.gridContainer} container spacing={3}>
+					<Grid item xs={2}>
+						<Avatar className={classes.avatar} variant={"square"} alt="Remy Sharp" src={props.avatar}/>
 					</Grid>
 					<Grid item xs={10}>
 						<Typography className={classes.repositoryName} variant={"h4"}>
@@ -39,12 +33,12 @@ export default function RepositoriesListRow(props) {
 								</Typography>
 							</Grid>
 							<Grid item xs={3}>
-								<Typography className={classes.otherDetails}  variant={"body1"}>
-									<BugReportIcon className={classes.bugReportIcon} /> Issues: {props.numberOfIssues}
+								<Typography className={classes.otherDetails} variant={"body1"}>
+									<BugReportIcon className={classes.bugReportIcon}/> Issues: {props.numberOfIssues}
 								</Typography>
 							</Grid>
 							<Grid item xs={6}>
-								<Typography   className={classes.otherDetails}  variant={"body2"}>
+								<Typography className={classes.otherDetails} variant={"body2"}>
 									Submitted 30 days ago by {props.userName}
 								</Typography>
 							</Grid>
