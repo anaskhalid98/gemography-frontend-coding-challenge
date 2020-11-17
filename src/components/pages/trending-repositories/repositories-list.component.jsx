@@ -3,6 +3,7 @@ import useStyles from "./repositories-list.style";
 import List from "@material-ui/core/List";
 import RepositoriesListRow from "./repositories-list-row.component";
 import {getMostStarredRepositories} from "./repositories-list.service";
+import RepositoriesListRowSkeleton from "./skeletons/repositories-list-row-skeleton.component";
 
 export default function RepositoriesList() {
 	const classes = useStyles();
@@ -20,6 +21,19 @@ export default function RepositoriesList() {
 	}, []);
 
 
+	if (isLoading) {
+		return (
+			<List className={classes.root}>
+				{
+					Array(6).fill(Math.random().toString(36).substr(2, 9)).map((id,index) => {
+						return (
+							<RepositoriesListRowSkeleton key={id}/>
+						)
+					})
+				}
+			</List>
+		)
+	}
 	return (
 		<List className={classes.root}>
 			{
@@ -34,7 +48,7 @@ export default function RepositoriesList() {
 							numberOfStars={repository.stargazers_count}
 							numberOfIssues={repository.open_issues_count}
 						/>
-						)
+					)
 				})
 			}
 		</List>
