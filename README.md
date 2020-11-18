@@ -1,6 +1,6 @@
 # Github Trending Repositories 
 This project shows list of the most starred Github repos that were created in the last 30 with an infinite scrolling.
-##Demo
+## Demo
 ![Alt text](github-trending-repos-demo.gif) 
 ##Install
 Fork the project and run:
@@ -8,7 +8,7 @@ Fork the project and run:
   npm install 
   npm start
 ```
-##Used Dependencies
+## Used Dependencies
 * material-ui : Open-source interface library for React, what is good about material-ui is that it that implements Google's Material Design witch help me to building high-quality UX. 
 * axios : It helps with HTTP requests to fetch or save data.
 * react-dom : Used to build project routes.
